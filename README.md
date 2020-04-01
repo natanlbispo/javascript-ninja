@@ -4,6 +4,6 @@ Este repositório mantém os estudos do Curso JavaScript Ninja
 
 ### Competências aprendidas
 
-- :heavy_check_mark:
+- :heavy_check_mark: Functional Programing
 
 [Natan Bispo](https://www.linkedin.com/in/natan-bispo-a98771140/)
