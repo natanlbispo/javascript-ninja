@@ -93,8 +93,14 @@ function convertToHex(color) {
         console.log(`Não temos o equivalente hexadecimal para ${color}.`)
     }
   };
-
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// ?
+convertToHex('white');
+convertToHex('red'); 
+convertToHex('yellow');
+convertToHex('green');
+convertToHex('blue');
+convertToHex('pink');
+convertToHex('orange');     
+convertToHex('purple'); 
