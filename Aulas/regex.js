@@ -7,6 +7,8 @@ regex = /m/g;
 console.log(texto.match(regex));
 regex = /\w/; // Get letters
 console.log(texto.match(regex)[0]);
+regex = /\w\w\w/; // Pega palavra com 3 caracteres 
+console.log(texto.match(regex)[0]);
 regex = /\w/g;
 console.log(texto.match(regex));
 regex = /sit/;
@@ -27,3 +29,71 @@ console.log(texto.replace(/(i)(n)/g, '--$1$2--'));
 console.log(texto.replace(/(i)(n)/g, ( t, f, l) =>{
     return (f+l).toUpperCase();
 }));
+
+regex = /\s/g; //espaço em branco, tab ou quebra de linha
+console.log(texto.match(regex));
+
+regex = /\n/g; //quebra de linha
+console.log(texto.match(regex));
+
+regex = /\t/g;
+console.log(texto.match(regex));
+
+
+regex = /./g; // não da match em quebra de linha
+console.log(texto.match(regex));
+
+regex =/ \s\w\w\s/;
+console.log(texto.match(regex));
+
+
+regex =/ ^\s\w\w\s/; // negação
+console.log(texto.match(regex));
+
+regex =/ \W/; // negação 
+console.log(texto.match(regex));
+
+regex =/ \D/; // negação 
+console.log(texto.match(regex));
+
+regex =/ \S/; // negação 
+console.log(texto.match(regex));
+
+regex =/ \S\s/; // pegar todos caracteres de uma texto
+console.log(texto.match(regex));    
+
+regex =/ \d{2,4}/; // repetidor de intervalo número entre 2 e 4 caracteres  
+console.log(texto.match(regex));   
+
+regex =/ \d{2,}/; // repetidor de intervalo aberto começando com 2   
+console.log(texto.match(regex));   
+
+regex =/ \d{2}/; // extamente n vezez  
+console.log(texto.match(regex));   
+
+regex =/ \d\d\d?/; // ou \d\d\d{0,1}  
+console.log(texto.match(regex));   
+
+regex =/ \s\d{2}\s?/; // pegando somente numero com x digitos ex: 1112 12 só da match com 12
+console.log(texto.match(regex));  
+
+regex =/\w+/; 
+console.log(texto.match(regex));  
+
+regex =/\w*/; 
+console.log(texto.match(regex)); 
+
+//validando urls
+regex = /https?:\/\/\w+[.\w]+/;
+
+//validando emails
+regex = /[\w.+]+@\w+\.\w+.?(\w)?/;
+
+//pegando elementos 
+regex = /[?&](\w+)=(\w+)/g; 
+let teste = "nome";
+teste.replace(regex, (regex, key, value)=>{
+    console.log(key, value);
+});
+
+
